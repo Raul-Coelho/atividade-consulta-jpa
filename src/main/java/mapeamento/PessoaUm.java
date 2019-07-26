@@ -3,6 +3,7 @@ package mapeamento;
 import java.time.LocalDate;
 
 import javax.persistence.Convert;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
@@ -15,6 +16,8 @@ public class PessoaUm {
 	@Id
 	private String cpf;
 	private Integer idade;
+	@Embedded
+	private Endereco endereco;
 	@Convert(converter=ConversorLocalDate.class)
 	private LocalDate dataNasc;
 	public PessoaUm() {
