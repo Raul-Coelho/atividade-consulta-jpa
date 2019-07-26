@@ -6,11 +6,14 @@ import javax.persistence.Convert;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 
 import conversores.ConversorLocalDate;
 
 @Entity
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class PessoaUm {
 	private String nome;
 	@Id
@@ -23,11 +26,13 @@ public class PessoaUm {
 	public PessoaUm() {
 		super();
 	}
-	public PessoaUm(String nome, String cpf, Integer idade, LocalDate dataNasc) {
+	
+	public PessoaUm(String nome, String cpf, Integer idade, Endereco endereco, LocalDate dataNasc) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.idade = idade;
+		this.endereco = endereco;
 		this.dataNasc = dataNasc;
 	}
 	public String getNome() {
@@ -53,6 +58,14 @@ public class PessoaUm {
 	}
 	public void setDataNasc(LocalDate dataNasc) {
 		this.dataNasc = dataNasc;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 	
 	
