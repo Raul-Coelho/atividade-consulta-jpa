@@ -4,15 +4,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
-import mapeamento.questão1.Area;
-import mapeamento.questão1.Escritor;
-import mapeamento.questão1.Publicacao;
-import mapeamento.questão1.Revisor;
+
+import mapeamento.questão2.Area;
+import mapeamento.questão2.Escritor;
+import mapeamento.questão2.Publicacao;
+import mapeamento.questão2.Revisor;
 
 
-public class Persister {
+
+public class Persister2 {
     
-    public Persister() {}
+    public Persister2() {}
     
     public void initPersistence(EntityManager em) {
         

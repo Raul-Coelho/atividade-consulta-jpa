@@ -98,6 +98,10 @@ public class Persister {
 		em.persist(professor3);
 		em.persist(professor4);
 		em.persist(professor5);
+		
+		
+		
+		
 	}
 	
 	

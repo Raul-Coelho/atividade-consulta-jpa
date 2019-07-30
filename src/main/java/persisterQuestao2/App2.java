@@ -8,11 +8,11 @@ import javax.persistence.PersistenceContext;
 
 @Singleton
 @Startup
-public class App {
+public class App2 {
     
     @PersistenceContext
     EntityManager em;
-    persister.Persister persister = new persister.Persister();
+    Persister2 persister = new Persister2();
     @PostConstruct
     private void init(){
     	persister.initPersistence(em);

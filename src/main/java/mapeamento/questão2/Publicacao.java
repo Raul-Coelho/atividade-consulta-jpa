@@ -1,5 +1,5 @@
 
-package mapeamento.questão1;
+package mapeamento.questão2;
 
 import java.io.Serializable;
 import java.util.Collection;
