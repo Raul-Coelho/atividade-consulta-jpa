@@ -19,24 +19,20 @@ public class Persister2 {
     
     public void initPersistence(EntityManager em) {
         
-//        List<Publicacao> publicacoes = new ArrayList<>();
         List<Area> area = new ArrayList<>();
-//        Publicacao publicacao = new Publicacao();
-        
-        
-        
+
         Area area1 = new Area("indústria");
         Area area2 = new Area("TI");
         Area area3 = new Area("Agronegocio");
         Area area4 = new Area("Financias");
         Area area5 = new Area("Ciencias"); 
         Area area6 = new Area("Exatas"); 
-        
-        Publicacao publicacao1 = new Publicacao(1,"TEste",Arrays.asList(area1));
+
+        Publicacao publicacao1 = new Publicacao(1,"Sondagem Industrial",Arrays.asList(area1));
         Publicacao publicacao2 = new Publicacao(2,"Java beans",Arrays.asList(area6, area2));
-        Publicacao publicacao3 = new Publicacao(3,"fdgdssdf",Arrays.asList(area3));
+        Publicacao publicacao3 = new Publicacao(3,"O agronegócio da soja nos contextos mundial e brasileiro",Arrays.asList(area3));
         Publicacao publicacao4 = new Publicacao(4,"Javai?",Arrays.asList(area4));
-        Publicacao publicacao5 = new Publicacao(5,"asdadsd",Arrays.asList(area5));
+        Publicacao publicacao5 = new Publicacao(5,"Projeto de Ciência para o Brasil",Arrays.asList(area5));
         
         area1.setPublicacao(publicacao1);
         area2.setPublicacao(publicacao2);
@@ -69,16 +65,6 @@ public class Persister2 {
         
         publicacao5.setEscritor(escritor1);
         publicacao5.setRevisor(revisor1);
-        
-//        em.persist(revisor1);
-//        em.persist(revisor3);
-//        em.persist(revisor4);
-//        em.persist(revisor5);
-//        
-//        em.persist(escritor1);
-//        em.persist(escritor3);
-//        em.persist(escritor4);
-//        em.persist(escritor5);
         
         em.persist(area1);
         em.persist(area2);
