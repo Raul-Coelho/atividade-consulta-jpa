@@ -4,6 +4,7 @@ package mapeamento.questão2;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -13,12 +14,12 @@ public class Revisor extends PessoaDois implements Serializable{
     
     private String nota;
     @OneToMany(mappedBy="revisor",cascade={CascadeType.ALL})
-    private Collection<Publicacao> publicacoes;
+    private List<Publicacao> publicacoes;
     
     public Revisor() {
     }
 
-    public Revisor(String nota, Collection<Publicacao> publicacoes, int id, String nome, LocalDate dataNascimento) {
+    public Revisor(String nota, List<Publicacao> publicacoes, int id, String nome, LocalDate dataNascimento) {
         super(id, nome, dataNascimento);
         this.nota = nota;
         this.publicacoes = publicacoes;
@@ -36,7 +37,7 @@ public class Revisor extends PessoaDois implements Serializable{
         return publicacoes;
     }
 
-    public void setPublicacoes(Collection<Publicacao> publicacoes) {
+    public void setPublicacoes(List<Publicacao> publicacoes) {
         this.publicacoes = publicacoes;
     }
 

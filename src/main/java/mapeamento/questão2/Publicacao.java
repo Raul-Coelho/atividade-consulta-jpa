@@ -3,6 +3,7 @@ package mapeamento.questão2;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,17 +16,17 @@ public class Publicacao implements Serializable{
     @Id
     private int codPublicacao;
     private String titulo;
-    @OneToMany(mappedBy="publicacao",cascade={CascadeType.ALL})
-    private Collection<Area> areas;
-    @ManyToOne
+    @OneToMany(mappedBy="publicacao",cascade={CascadeType.PERSIST})
+    private List<Area> areas;
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private Revisor revisor;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private Escritor escritor;
 
     public Publicacao() {
     }
 
-    public Publicacao(int codPublicacao, String titulo, Collection<Area> areas, Revisor revisor, Escritor escritor) {
+    public Publicacao(int codPublicacao, String titulo, List<Area> areas, Revisor revisor, Escritor escritor) {
         this.codPublicacao = codPublicacao;
         this.titulo = titulo;
         this.areas = areas;
@@ -33,6 +34,16 @@ public class Publicacao implements Serializable{
         this.escritor = escritor;
     }
 
+    public Publicacao(int codPublicacao, String titulo, List<Area> areas) {
+        this.codPublicacao = codPublicacao;
+        this.titulo = titulo;
+        this.areas = areas;
+    }
+    
+
+    
+    
+    
     public int getCodPublicacao() {
         return codPublicacao;
     }
@@ -49,11 +60,11 @@ public class Publicacao implements Serializable{
         this.titulo = titulo;
     }
 
-    public Collection<Area> getAreas() {
+    public List<Area> getAreas() {
         return areas;
     }
 
-    public void setAreas(Collection<Area> areas) {
+    public void setAreas(List<Area> areas) {
         this.areas = areas;
     }
 
@@ -75,7 +86,9 @@ public class Publicacao implements Serializable{
 
     @Override
     public String toString() {
-        return "Publicacao{" + "codPublicacao=" + codPublicacao + ", titulo=" + titulo + ", areas=" + areas + ", revisor=" + revisor + ", escritor=" + escritor + '}';
+        return "Publicacao{" + "codPublicacao=" + codPublicacao + ", titulo=" + titulo + '}';
     }
+
+    
 
 }

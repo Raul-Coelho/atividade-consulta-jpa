@@ -28,9 +28,9 @@ public class Persister {
 		Aluno aluno4 = new Aluno("Juzé", "12348", 22, new Endereco("Rua4", "Bairro4", "Cidade4", "12345-124"), LocalDate.of(1997, 1, 10), "199712001015", LocalDate.of(1997, 1, 10), "ADS");
 		Aluno aluno5 = new Aluno("Juão", "12349", 22, new Endereco("Rua5", "Bairro5", "Cidade5", "12345-125"), LocalDate.of(1997, 1, 10), "199712001016", LocalDate.of(1997, 1, 10), "ADS");
 		
-		Livro livro1 = new Livro("Un livru legual", "19741", LocalDate.of(1997, 1, 13));
-		Livro livro2 = new Livro("Mangá em portugues", "19742", LocalDate.of(1997, 1, 11));
-		Livro livro3 = new Livro("Ágnam em japonês", "19743", LocalDate.of(1997, 1, 1));
+		Livro livro1 = new Livro("Un livru legual", "19741", LocalDate.of(2019, 1, 13));
+		Livro livro2 = new Livro("Mangá em portugues", "19742", LocalDate.of(2019, 1, 11));
+		Livro livro3 = new Livro("Ágnam em japonês", "19743", LocalDate.of(2019, 1, 1));
 		Livro livro4 = new Livro(":)", "19744", LocalDate.of(1997, 1, 1));
 		Livro livro5 = new Livro(":(", "19745", LocalDate.of(1997, 1, 6));
 		
@@ -40,11 +40,11 @@ public class Persister {
 		livros1.addAll(Arrays.asList(livro2, livro3));
 		livros2.addAll(Arrays.asList(livro4, livro5));
 		
-		Autor autor1 = new Autor("José das Couves Pinto", "12315", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
-		Autor autor2 = new Autor("Francisco Tripa", "12325", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
-		Autor autor3 = new Autor("Jose Esoj", "12335", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
-		Autor autor4 = new Autor("Maria Airam", "12355", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
-		Autor autor5 = new Autor("João Oãoj", "12365", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "Sei Lá... 3?");
+		Autor autor1 = new Autor("José das Couves Pinto", "12315", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
+		Autor autor2 = new Autor("Francisco Tripa", "12325", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
+		Autor autor3 = new Autor("Jose Esoj", "12335", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
+		Autor autor4 = new Autor("Maria Airam", "12355", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
+		Autor autor5 = new Autor("João Oãoj", "12365", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "Sei Lá... 3?");
 		
 		autor3.setLivros(livros1);
 		autor4.setLivros(livros1);
@@ -68,14 +68,14 @@ public class Persister {
 		
 		
 		List<Telefone> telefones1 = new ArrayList<>();
-                telefones1.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
+                telefones1.add(new Telefone("(83) 99951-5118", TelefoneType.RESIDENCIAL));
                 telefones1.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
 		List<Telefone> telefones2 = new ArrayList<>();
                 telefones2.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
                 telefones2.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
 		List<Telefone> telefones3 = new ArrayList<>();
-                telefones3.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
-                telefones3.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
+                telefones3.add(new Telefone("(83) 99951-5118", TelefoneType.RESIDENCIAL));
+                telefones3.add(new Telefone("(83) 99951-5118", TelefoneType.COMERCIAL));
 		List<Telefone> telefones4 = new ArrayList<>();
                 telefones4.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
                 telefones4.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));

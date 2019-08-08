@@ -3,6 +3,8 @@ package mapeamento.questão2;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -10,9 +12,10 @@ import javax.persistence.ManyToOne;
 public class Area implements Serializable{
     
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int cod;
     private String nome;
-    @ManyToOne
+    @ManyToOne()
     private Publicacao publicacao;
 
     public Area() {
@@ -24,6 +27,12 @@ public class Area implements Serializable{
         this.publicacao = publicacao;
     }
 
+    public Area(String nome) {
+        this.nome = nome;
+    }
+    
+    
+    
     public int getCod() {
         return cod;
     }
