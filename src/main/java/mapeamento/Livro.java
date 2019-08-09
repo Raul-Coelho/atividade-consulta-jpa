@@ -77,9 +77,12 @@ public class Livro {
 		this.autores.add(autor);
 	}
 
-    @Override
-    public String toString() {
-        return "Livro{" + "titulo=" + titulo + ", ISBN=" + ISBN + ", lancamento=" + lancamento + '}';
-    }
-    
+	@Override
+	public String toString() {
+		return "Livro{" +
+				"titulo='" + titulo + '\'' +
+				", ISBN='" + ISBN + '\'' +
+				", lancamento=" + lancamento +
+				'}';
+	}
 }

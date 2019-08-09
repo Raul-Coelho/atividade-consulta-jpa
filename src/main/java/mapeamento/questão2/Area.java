@@ -2,15 +2,11 @@
 package mapeamento.questão2;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Area implements Serializable{
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int cod;
@@ -30,9 +26,9 @@ public class Area implements Serializable{
     public Area(String nome) {
         this.nome = nome;
     }
-    
-    
-    
+
+
+
     public int getCod() {
         return cod;
     }
@@ -61,5 +57,4 @@ public class Area implements Serializable{
     public String toString() {
         return "Area{" + "cod=" + cod + ", nome=" + nome + ", publicacao=" + publicacao + '}';
     }
-
 }

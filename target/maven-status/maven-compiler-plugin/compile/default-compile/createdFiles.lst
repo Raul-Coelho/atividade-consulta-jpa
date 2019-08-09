@@ -1,9 +1,9 @@
 mapeamento/Endereco_.class
 mapeamento/questão2/Area.class
 persisterQuestao2/App2.class
-mapeamento/questão2/Revisor_.class
 mapeamento/Professor.class
 mapeamento/Telefone_.class
+mapeamento/questão2/Revisor_.class
 App.class
 mapeamento/Aluno.class
 mapeamento/questão2/Revisor.class
@@ -16,12 +16,11 @@ mapeamento/questão2/PessoaDois_.class
 mapeamento/PessoaUm.class
 mapeamento/Livro.class
 mapeamento/questão2/PessoaDois.class
-mapeamento/AlunoVO.class
 mapeamento/Aluno_.class
 mapeamento/questão2/Publicacao_.class
 conversores/ConversorLocalDate.class
-mapeamento/Autor.class
 mapeamento/Professor_.class
+mapeamento/Autor.class
 mapeamento/PessoaUm_.class
 mapeamento/questão2/Escritor_.class
 mapeamento/questão2/Escritor.class

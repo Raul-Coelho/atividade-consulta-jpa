@@ -11,11 +11,11 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Revisor extends PessoaDois implements Serializable{
-    
+
     private String nota;
     @OneToMany(mappedBy="revisor",cascade={CascadeType.ALL})
     private List<Publicacao> publicacoes;
-    
+
     public Revisor() {
     }
 
@@ -45,5 +45,4 @@ public class Revisor extends PessoaDois implements Serializable{
     public String toString() {
         return "Revisor{" + "nota=" + nota + ", publicacoes=" + publicacoes + '}';
     }
-    
 }

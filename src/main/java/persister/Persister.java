@@ -28,11 +28,11 @@ public class Persister {
 		Aluno aluno4 = new Aluno("Juzé", "12348", 22, new Endereco("Rua4", "Bairro4", "Cidade4", "12345-124"), LocalDate.of(1997, 1, 10), "199712001015", LocalDate.of(1997, 1, 10), "ADS");
 		Aluno aluno5 = new Aluno("Juão", "12349", 22, new Endereco("Rua5", "Bairro5", "Cidade5", "12345-125"), LocalDate.of(1997, 1, 10), "199712001016", LocalDate.of(1997, 1, 10), "ADS");
 		
-		Livro livro1 = new Livro("Un livru legual", "19741", LocalDate.of(2019, 1, 13));
-		Livro livro2 = new Livro("Mangá em portugues", "19742", LocalDate.of(2019, 1, 11));
-		Livro livro3 = new Livro("Ágnam em japonês", "19743", LocalDate.of(2019, 1, 1));
-		Livro livro4 = new Livro(":)", "19744", LocalDate.of(1997, 1, 1));
-		Livro livro5 = new Livro(":(", "19745", LocalDate.of(1997, 1, 6));
+		Livro livro1 = new Livro("Un livru legual", "19741", LocalDate.of(1997, 1, 13));
+		Livro livro2 = new Livro("Mangá em portugues", "19742", LocalDate.of(1997, 1, 11));
+		Livro livro3 = new Livro("Ágnam em japonês", "19743", LocalDate.of(1997, 1, 1));
+		Livro livro4 = new Livro(":)", "19744", LocalDate.of(2019, 01, 01));
+		Livro livro5 = new Livro(":(", "19745", LocalDate.of(2019, 12, 12));
 		
 		List<Livro> livros1 = new ArrayList<>();
 		List<Livro> livros2 = new ArrayList<>();
@@ -43,8 +43,8 @@ public class Persister {
 		Autor autor1 = new Autor("José das Couves Pinto", "12315", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
 		Autor autor2 = new Autor("Francisco Tripa", "12325", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
 		Autor autor3 = new Autor("Jose Esoj", "12335", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "SeiLá");
-		Autor autor4 = new Autor("Maria Airam", "12355", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
-		Autor autor5 = new Autor("João Oãoj", "12365", 22, new Endereco("Rua1", "Bairro1", "Cajazeiras", "12345-121"), LocalDate.of(1997, 1, 10), "Sei Lá... 3?");
+		Autor autor4 = new Autor("Maria Airam", "12355", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "ComoAssim?");
+		Autor autor5 = new Autor("João Oãoj", "12365", 22, new Endereco("Rua1", "Bairro1", "Cidade1", "12345-121"), LocalDate.of(1997, 1, 10), "Sei Lá... 3?");
 		
 		autor3.setLivros(livros1);
 		autor4.setLivros(livros1);
@@ -66,29 +66,29 @@ public class Persister {
 		
 		livro1.setAutor(autor2);
 		
-		
-		List<Telefone> telefones1 = new ArrayList<>();
-                telefones1.add(new Telefone("(83) 99951-5118", TelefoneType.RESIDENCIAL));
-                telefones1.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
+		List<Telefone> telefones = new ArrayList<>();
+		telefones.add(new Telefone("(83) 99951-5112", TelefoneType.RESIDENCIAL));
+		telefones.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
+
 		List<Telefone> telefones2 = new ArrayList<>();
-                telefones2.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
-                telefones2.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
+		telefones2.add(new Telefone("(83) 99951-5114", TelefoneType.RESIDENCIAL));
+		telefones2.add(new Telefone("(83) 99951-5115", TelefoneType.COMERCIAL));
+
 		List<Telefone> telefones3 = new ArrayList<>();
-                telefones3.add(new Telefone("(83) 99951-5118", TelefoneType.RESIDENCIAL));
-                telefones3.add(new Telefone("(83) 99951-5118", TelefoneType.COMERCIAL));
+		telefones3.add(new Telefone("(83) 99951-5116", TelefoneType.RESIDENCIAL));
+		telefones3.add(new Telefone("(83) 99951-5117", TelefoneType.COMERCIAL));
+
 		List<Telefone> telefones4 = new ArrayList<>();
-                telefones4.add(new Telefone("(83) 99951-5113", TelefoneType.RESIDENCIAL));
-                telefones4.add(new Telefone("(83) 99951-5113", TelefoneType.COMERCIAL));
-		
-                
-                
-                
-                
-                Professor professor1 = new Professor("Semnome", "23456", 22, new Endereco("Que atividade fácil", "Bairro", "Nárnia", "12345-123"), LocalDate.of(1997, 1, 29), 6000f, telefones1);
-		Professor professor2 = new Professor("Testerson", "23457", 22, new Endereco("Que atividade fácil", "Bairro", "Nárnia", "12345-123"), LocalDate.of(1997, 1, 29), 3000f, telefones2);
-		Professor professor3 = new Professor("Agadoisó", "23458", 22, new Endereco("Que atividade fácil", "Bairro", "Nárnia", "12345-123"), LocalDate.of(1997, 1, 29), 12000f, telefones3);
-		Professor professor4 = new Professor("Janeiro de Noventaesete", "23459", 22, new Endereco("Que atividade fácil", "Bairro", "Nárnia", "12345-123"), LocalDate.of(1997, 1, 29), 10000f, telefones4);
-		Professor professor5 = new Professor("Comnome", "23450", 22, new Endereco("Que atividade fácil", "Bairro", "Nárnia", "12345-123"), LocalDate.of(1997, 1, 29), 5000f);
+		telefones4.add(new Telefone("(83) 99951-5118", TelefoneType.RESIDENCIAL));
+		telefones4.add(new Telefone("(83) 99951-5119", TelefoneType.COMERCIAL));
+
+		List<Telefone> telefones0 = new ArrayList<>();
+
+		Professor professor1 = new Professor("Semnome", "23456", 22, new Endereco("Atividade Facil","IF","Cajazeiras","58900-000"), LocalDate.of(1997, 1, 29), 6000f, telefones);
+		Professor professor2 = new Professor("Testerson", "23457", 22, new Endereco("Atividade Facil","IF","Cajazeiras","58900-000"), LocalDate.of(1997, 1, 29), 3000f, telefones2);
+		Professor professor3 = new Professor("Agadoisó", "23458", 22, new Endereco("Atividade Facil","IF","Cajazeiras","58900-000"), LocalDate.of(1997, 1, 29), 12000f, telefones3);
+		Professor professor4 = new Professor("Janeiro de Noventaesete", "23459", 22, new Endereco("Atividade Facil","IF","Cajazeiras","58900-000"), LocalDate.of(1997, 1, 29), 10000f, telefones4);
+		Professor professor5 = new Professor("Comnome", "23450", 22, new Endereco("Atividade Facil","IF","Cajazeiras","58900-000"), LocalDate.of(1997, 1, 29), 5000f);
 		
 		
 		em.persist(aluno1);

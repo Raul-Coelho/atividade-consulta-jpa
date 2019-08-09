@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Escritor extends PessoaDois implements Serializable{
-    
+
     private int premios;
     @OneToMany(mappedBy="escritor",cascade={CascadeType.ALL})
     private List<Publicacao> publicacoes;
@@ -45,5 +45,4 @@ public class Escritor extends PessoaDois implements Serializable{
     public String toString() {
         return "Escritor{" + "premios=" + premios + ", publicacoes=" + publicacoes + '}';
     }
-    
 }

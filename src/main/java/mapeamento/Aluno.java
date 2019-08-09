@@ -51,11 +51,6 @@ public class Aluno extends PessoaUm {
 	public void setTurma(String turma) {
 		this.turma = turma;
 	}
-
-    @Override
-    public String toString() {
-        return "Aluno{" + "matricula=" + matricula + ", dataIngresso=" + dataIngresso + ", turma=" + turma + '}';
-    }
 	
     
 }

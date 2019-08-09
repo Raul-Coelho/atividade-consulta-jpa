@@ -13,7 +13,7 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class PessoaDois implements Serializable{
-    
+
     @Id
     private int id;
     private String nome;

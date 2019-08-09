@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Publicacao implements Serializable{
-    
+
     @Id
     private int codPublicacao;
     private String titulo;
@@ -39,11 +39,11 @@ public class Publicacao implements Serializable{
         this.titulo = titulo;
         this.areas = areas;
     }
-    
 
-    
-    
-    
+
+
+
+
     public int getCodPublicacao() {
         return codPublicacao;
     }
@@ -88,7 +88,5 @@ public class Publicacao implements Serializable{
     public String toString() {
         return "Publicacao{" + "codPublicacao=" + codPublicacao + ", titulo=" + titulo + '}';
     }
-
-    
 
 }

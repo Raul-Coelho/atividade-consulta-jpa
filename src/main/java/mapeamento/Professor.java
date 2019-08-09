@@ -1,18 +1,12 @@
 package mapeamento;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.ElementCollection;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 public class Professor extends PessoaUm {
-
     private Float salario;
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Telefone> telefones;
@@ -22,7 +16,7 @@ public class Professor extends PessoaUm {
     }
 
     public Professor(String nome, String cpf, Integer idade, Endereco endereco, LocalDate dataNasc, Float salario,
-            List<Telefone> telefones) {
+                     List<Telefone> telefones) {
         super(nome, cpf, idade, endereco, dataNasc);
         this.salario = salario;
         this.telefones = telefones;
@@ -51,7 +45,9 @@ public class Professor extends PessoaUm {
 
     @Override
     public String toString() {
-        return "Professor{" + "salario=" + salario + ", telefones=" + telefones + '}';
+        return "Professor{" +
+                "salario=" + salario +
+                ", telefones=" + telefones +
+                '}';
     }
-    
 }
